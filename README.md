@@ -93,7 +93,7 @@ The Sytles directory contains the qss files. These files define the color scheme
 ![Default Color](/docs/default_colors.png)
 *Style*
 
-A C++ class was written for every subdirectory shown in the red box.  The class reads all the reference files present in it or its child subdirectories while populating the GUI based on user input.  Following classes are written 
+A C++ class was written for every direct subdirectory of main reference file directory .  The class reads all the reference files present in it or its child subdirectories while populating the GUI based on user input.  Following classes are written 
 *	Global: This class reads the ini reference files present in Global directory. The configure options are global option of GNSS-SDR.
 *	Supl:  All SUPL related options are populated on GUI using this class. 
 *	SignalSource: This class reads the reference files present in signalsource directory. All signal sources available in GNSS-SDR can be configured. The class also emits qt signals for other classes.
