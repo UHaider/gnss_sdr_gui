@@ -56,6 +56,11 @@ Please click the link below to watch a video showing the working of the develope
 [Video](https://streamable.com/casws)
 
 
+## Bug reporting and feedback
+
+Please contact on GNSS-SDR mailing list for any bug reporting and feedbacks. You can subscribe [here](https://sourceforge.net/projects/gnss-sdr/lists/gnss-sdr-developers)  
+
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/gnss-sdr/gnss-sdr/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
