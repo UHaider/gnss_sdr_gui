@@ -32,7 +32,7 @@
 
 #include "observables.h"
 
-Observables::Observables(QWidget *parent, QString block_name_, QString dir_path_) : QWidget(parent), dir_path(dir_path_), block_name(block_name_)
+Observables::Observables(QWidget *parent, QString block_name_, QString dir_path_) : QWidget(parent), block_name(block_name_), dir_path(dir_path_)
 {
 
     block_dir = new QDir(dir_path);

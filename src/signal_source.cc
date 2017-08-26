@@ -31,7 +31,7 @@
 
 #include "signal_source.h"
 
-Signal_Source::Signal_Source(QWidget * parent, QString block_name_, QString dir_path_) : QWidget(parent), dir_path(dir_path_), block_name(block_name_)
+Signal_Source::Signal_Source(QWidget * parent, QString block_name_, QString dir_path_) : QWidget(parent), block_name(block_name_), dir_path(dir_path_)
 {
     map_generic = new QMap<QString, QLineEdit *>;
     map_subgroup_list =  new QMap<int, QStringList*>;
