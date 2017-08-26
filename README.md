@@ -7,7 +7,7 @@ This page gives information about GUI developed for GNSS-SDR as part of GSoC 201
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Installation from source on Linux (Tested on Ubuntu 16.04.3 LTS).
+### Installation from source on Linux (Tested on Ubuntu 16.04.3 LTS)
 
 If you have a fresh installation of Ubuntu follow the following steps
 
@@ -47,7 +47,7 @@ Install Qt Creator 4.2.1 community edition. Available free [here](https://info.q
 *	Run
 
 
-## Generating the configuration file.
+## Generating the configuration file
 
 ### Video 
 
@@ -55,10 +55,17 @@ Please click the link below to watch a video showing the working of the develope
 
 [Video](https://streamable.com/casws)
 
+## Design
+
+The application uses reference files for global parameters, gnss-sdr classes whereas qss files are used for styles. For every class present in the project that uses configuration interface for setting the configuration options a reference ini file is created.  The file has all the configuration options available for that class/block. At application startup this file is used to populate the GUI with widgets and layouts. An example of reference file for UHD signal source is shown below
+
+![UHD reference file](/docs/uhd_reference_file.png)
+
+
 
 ## Bug reporting and feedback
 
-Please contact on GNSS-SDR mailing list for any bug reporting and feedbacks. You can subscribe [here](https://sourceforge.net/projects/gnss-sdr/lists/gnss-sdr-developers)  
+Please contact on GNSS-SDR mailing list for any bug reporting and feedbacks. You can subscribe [here](https://sourceforge.net/projects/gnss-sdr/lists/gnss-sdr-developers)
 
 
 ## Contributing
