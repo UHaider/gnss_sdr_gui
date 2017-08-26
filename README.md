@@ -68,7 +68,7 @@ Please read [CONTRIBUTING.md](https://github.com/gnss-sdr/gnss-sdr/blob/master/C
 
 ## License
 
-Please see following link for license
+GNSS-SDR GUI is released under the [General Public License (GPL) v3](http://www.gnu.org/licenses/gpl.html). Please visit following link for details
 
 [License](https://github.com/gnss-sdr/gnss-sdr#about-the-software-license)
 
