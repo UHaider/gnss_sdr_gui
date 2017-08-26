@@ -59,15 +59,34 @@ Please click the link below to watch a video showing the working of the develope
 
 The application uses reference files for global parameters, gnss-sdr classes whereas qss files are used for styles. For every class present in the project that uses configuration interface for setting the configuration options a reference ini file is created.  The file has all the configuration options available for that class/block. At application startup this file is used to populate the GUI with widgets and layouts. An example of reference file for UHD signal source is shown below
 
-![UHD reference file](/docs/uhd_reference_file.png)
+```
+
+[UHD_Signal_Source]
+;src/algorithms/signal_source/adapters/uhd_signal_source.cc
+SignalSource.device_address=
+SignalSource.subdevice=
+SignalSource.clock_source=
+SignalSource.RF_channels=
+SignalSource.sampling_frequency=
+SignalSource.item_type=cshort
+;For Each RF Channel
+RF_channels/SignalSource.samples=
+RF_channels/SignalSource.dump=
+RF_channels/SignalSource.dump_filename=./data/signal_source.dat
+RF_channels/SignalSource.freq=
+RF_channels/SignalSource.gain=
+RF_channels/SignalSource.IF_bandwidth_hz=
+```
 
 This approach will make addition of new blocks or configuration options easy since developer can create a file for the new block or can edit the existing file for adding/deleting configuration options. If a user adds a new class for acquisition and wants to configure it through GUI he can place its reference file in Acquisition directory. The overall directory structure that should be maintain for correct working is shown in next figure.
 
 ![Directory structure](/docs/directory_structure.png)
+*Directory structure*
 
 The Sytles directory contains the qss files. These files define the color schemes of GUI. User can define their own color schemes by editing the qss stylesheet file present in Styles directory. User can select the color scheme using Load Style in menu bar as shown below
 
 ![Default Color](/docs/default_colors.png)
+*Style*
 
 A C++ class was written for every subdirectory shown in the red box.  The class reads all the reference files present in it or its child subdirectories while populating the GUI based on user input.  Following classes are written 
 *	Global: This class reads the ini reference files present in Global directory. The configure options are global option of GNSS-SDR.
@@ -81,11 +100,12 @@ A C++ class was written for every subdirectory shown in the red box.  The class 
 
 Flowchart showing the working of the application is shown in Figure 5.
 
-![Flowchart](/docs/simple_flowgraph.png)
+![Flowchart](/docs/simple_flowgraph.jpg)
+*Flowchart*
 
 
 
-##Sample interfaces
+## Sample interfaces
 
 Figures showing user interface for different classes are shown below.
 
@@ -94,31 +114,34 @@ Figures showing user interface for different classes are shown below.
 User can select supl implementation from the combobox and following interface for SUPL will show up
 
 ![SUPL](/docs/supl.png)
+*SUPL interface*
 
 ### Global
 
 User interface for global options is shown below
 
-![SUPL](/docs/global.png)
+![Global](/docs/global.png)
+*Global interface*
 
 ### Signal Source
 
 The signal source user interface is dynamically populated. The first variable is Receiver.sources_count. This value determines the number of signal sources for the receiver. If user enters 2 and click the update button, two subtabs will show up as shown below one for each signal source. This will also send qt signals to signal conditioner and channels classes so that two signal conditioners are created and signal source IDs can be set. 
 
 ![Signal Source](/docs/signal_source.png)
+*Signal Source interface*
 
 ### Signal Conditioner
 
 The signal conditioner class accepts signals from signal source class. Since, number of signal conditioner depends on the number of signal sources and RF channels the signal source class sends this information via Qt signals to signal conditioner class.  Implementation of data type adapter, input filters and resampler can be selected using respective comboboxes. User interfaces for data type adapter, input filters and resampler for signal conditioner are shown below
 
 ![Data Type Adapter](/docs/data_type_adapter.png)
-*Data Type Adapter*
+*Data Type Adapter interface*
 
 ![Input Filter](/docs/input_filter.png)
-*Input Filter*
+*Input Filter interface*
 
 ![Resampler](/docs/resampler.png)
-*Resampler*
+*Resampler interface*
 
 ### Channels
 
@@ -126,24 +149,30 @@ Channels user interface has four subtabs. First tab allows user to enter the val
 Acquisition, tracking and telemetry decoder subtabs allows user to select the generic implementation for all the channels and also allows user to select implementation for a specific channel it he wants too. Following pictures show the interface for all subtabs
 
 ![Channels](/docs/channels.png)
+*Channels interface*
 
 ![Acquisition](/docs/acquisition.png)
+*Acquisition interface*
 
 ![Tracking](/docs/tracking.png)
+*Tracking interface*
 
 ![Telemetry Decoder](/docs/telemetry_deocder.png)
+*Telemetry Decoder interface*
 
 ### Observables
 
 Observables user interface is given below, user can select the observables implementation from the combobox and configuration options for the selected implementation will show up
 
 ![Observables](/docs/observables.png)
+*Observables interface*
 
 ### PVT
 
 PVT user interface is given below, user can select the PVT implementation from the combobox and configuration options for the selected implementation will show up
 
 ![PVT](/docs/pvt.png)
+*PVT interface*
 
 
 ## Bug reporting and feedback
