@@ -31,6 +31,26 @@ $ qmake gnss_sdr_gui.pro DESTDIR=/home/username/ GUI_FILES_LOCATION="/home/usern
 $ make
 ```
 
+### Using build script(Tested on Ubuntu 16.04.3 LTS)
+
+If you have Qt5.x and git installed on your system you can use this shell [script](https://github.com/UHaider/utilities/blob/master/build_app.sh) as follow
+
+```
+$ chmod +x build_app.sh
+$ ./build_app.sh -D /home/username/ -G /home/username/Documents/
+```
+
+The script will clone this repository, build it and will place the executable in /home/username/. Also the script will copy the reference files directory in  /home/username/Documents/. 
+
+If you run the script without any parameters as below
+
+```
+$ chmod +x build_app.sh
+$ ./build_app.sh
+```
+
+The script will clone this repository, build it and will place the executable in the src direcotry. Also the user has to place the reference files directory in user's home folder otherwise the GUI will not be populated.
+
 ### Running on Linux with Qt Creator 4.2.1 (Community):
 
 Install Qt Creator 4.2.1 community edition. Available free [here](https://info.qt.io/download-qt-for-application-development)
@@ -56,7 +76,7 @@ Install Qt Creator 4.2.1 community edition. Available free [here](https://info.q
 
 ### Video 
 
-Please click the link below to watch a video showing the working of the developed GUI. The video also shows how to generate the example configuration file for the online tutorial “My first position fix”. The output of GNSS-SDR with the generated configuration file is also sown.
+Please click the link below to watch a video showing the working of the developed GUI. The video also shows how to generate the example configuration file for the online tutorial “My first position fix”. The output of GNSS-SDR with the generated configuration file is also shown.
 
 [Video](https://streamable.com/casws)
 
@@ -162,7 +182,7 @@ Acquisition, tracking and telemetry decoder subtabs allows user to select the ge
 ![Tracking](/docs/tracking.png)
 *Tracking interface*
 
-![Telemetry Decoder](/docs/telemetry_deocder.png)
+![Telemetry Decoder](/docs/telemetry.png)
 *Telemetry Decoder interface*
 
 ### Observables
