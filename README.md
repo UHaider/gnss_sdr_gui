@@ -15,11 +15,16 @@ If you have a fresh installation of Ubuntu follow the following steps
 $ sudo apt-get update
 $ sudo apt-get install qtbase5-dev
 $ sudo apt-get install qt5-default
+```
+
+Then navigate to the src directory and run following
+
+```
 $ qmake gnss_sdr_gui.pro DESTDIR=/path/to/executable/ GUI_FILES_LOCATION="/path/to/gui_ini_files/"
 $ make
 ```
 
-For example If you want to place the executable in /home/username/ and you have placed "gui_ini_files" folder in /home/username/Documents/. Use following qmake command 
+For example If you want to place the executable in /home/username/ and you have placed "gui_ini_files" folder in /home/username/Documents/. Use following qmake command in src directory
 
 ```
 $ qmake gnss_sdr_gui.pro DESTDIR=/home/username/ GUI_FILES_LOCATION="/home/username/Documents/"
