@@ -200,6 +200,10 @@ PVT user interface is given below, user can select the PVT implementation from t
 *PVT interface*
 
 
+## Future Work
+
+The current GUI is very easy to use and can entertain new implementations by just adding the reference ini files in respective directory. However, currently it is not capable to load already generated configuration files due to the very dynamic nature of GUI. Further, current GUI shows tooltips for some of the variables to give their short description. This is because the ini files can only contain [variable, value] pair. We cannot link other values to it like its description etc. So in future this could be overcome by using yaml or xml like reference files that allow setting multiple values for single variable. The application can then read those values, for example description of that variable, and show them in GUI.
+
 ## Bug reporting and feedback
 
 Please contact on GNSS-SDR mailing list for any bug reporting and feedbacks. You can subscribe [here](https://sourceforge.net/projects/gnss-sdr/lists/gnss-sdr-developers)
