@@ -108,7 +108,7 @@ This approach will make addition of new blocks or configuration options easy sin
 ![Directory structure](/docs/directory_structure.png)
 *Directory structure*
 
-The Sytles directory contains the qss files. These files define the color schemes of GUI. User can define their own color schemes by editing the qss stylesheet file present in Styles directory. User can select the color scheme using Load Style in menu bar as shown below
+The Styles directory contains the qss files. These files define the color schemes of GUI. User can define their own color schemes by editing the qss stylesheet file present in Styles directory. User can select the color scheme using Load Style in menu bar as shown below
 
 ![Default Color](/docs/default_colors.png)
 *Style*
